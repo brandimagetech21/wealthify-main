@@ -1,0 +1,38 @@
+{
+  "name": "wealtify",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.6",
+    "axios": "^1.1.2",
+    "base64-to-image": "^1.0.2",
+    "bootstrap": "^5.2.2",
+    "browser-image-compression": "^2.0.0",
+    "fa-icons": "^0.2.0",
+    "fontawesome": "^5.6.3",
+    "moment": "^2.29.4",
+    "next": "12.3.1",
+    "next-images": "^1.8.4",
+    "react": "18.2.0",
+    "react-calendar": "^3.9.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-phone-input-2": "^2.15.1",
+    "react-redux": "^8.0.4",
+    "react-table": "^7.8.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.1"
+  }
+}

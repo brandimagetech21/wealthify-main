@@ -1,0 +1,215 @@
+{
+  "firstName": "",
+  "lastName": "",
+  "phoneNumber": "",
+  "email": "",
+  "dob": "",
+  "todayDate": "",
+  "sex": "",
+  "age": "",
+  "height": "",
+  "currentWeight": "",
+  "normalWeight": "",
+  "oldWeight": "",
+  "medicalCondition": "",
+  "seasonalAllergies": "",
+  "allergies": {}
+}
+//  > direct child 
+//    any child 
+
+{
+Allergies_family: "family"
+​
+Allergies_self: "self"
+​
+Anemia_family: "family"
+​
+Anemia_self: "self"
+​
+Anxiety_family: "family"
+​
+Anxiety_self: "self"
+​
+Arthritis_family: "family"
+​
+Arthritis_self: "self"
+​
+Asthma_family: "family"
+​
+Asthma_self: "self"
+​
+Autoimmune_family: "family"
+​
+Autoimmune_self: "self"
+​
+Bronchitis_family: "family"
+​
+Bronchitis_self: "self"
+​
+Cancer_family: "family"
+​
+Cancer_self: "self"
+​
+Chronic_family: "family"
+​
+Chronic_self: "self"
+​
+"Crohn's_family": "family"
+​
+"Crohn's_self": "self"
+​
+Depression_family: "family"
+​
+Depression_self: "self"
+​
+Diabetes_family: "family"
+​
+Diabetes_self: "self"
+​
+Dry_family: "family"
+​
+Dry_self: "self"
+​
+Eczema_family: "family"
+​
+Eczema_self: "self"
+​
+Emphysema_family: "family"
+​
+Emphysema_self: "self"
+​
+Epilepsy_family: "family"
+​
+Epilepsy_self: "self"
+​
+Eye_family: "family"
+​
+Eye_self: "self"
+​
+Fibromyalgia_family: "family"
+​
+Fibromyalgia_self: "self"
+​
+Food_family: "family"
+​
+Food_self: "self"
+​
+Fungal_family: "family"
+​
+Fungal_self: "self"
+​
+Gallbladder_family: "family"
+​
+Gallbladder_self: "self"
+​
+Gout_family: "family"
+​
+Gout_self: "self"
+​
+Heart_family: "family"
+​
+Heart_self: "self"
+​
+Heartburn_family: "family"
+​
+Heartburn_self: "self"
+​
+Hepatitis_family: "family"
+​
+Hepatitis_self: "self"
+​
+High_family: "family"
+​
+High_self: "self"
+​
+Hypoglycemia_family: "family"
+​
+Hypoglycemia_self: "self"
+​
+Inflammatory_family: "family"
+​
+Inflammatory_self: "self"
+​
+Intestinal_family: "family"
+​
+Intestinal_self: "self"
+​
+Irritable_family: "family"
+​
+Irritable_self: "self"
+​
+Kidney_family: "family"
+​
+Kidney_self: "self"
+​
+Liver_family: "family"
+​
+Liver_self: "self"
+​
+Lung_family: "family"
+​
+Lung_self: "self"
+​
+Mononucleosis_family: "family"
+​
+Mononucleosis_self: "self"
+​
+Osteoporosis_family: "family"
+​
+Osteoporosis_self: "self"
+​
+Other_family: "family"
+​
+Other_self: "self"
+​
+PMS_family: "family"
+​
+PMS_self: "self"
+​
+Pneumonia_family: "family"
+​
+Pneumonia_self: "self"
+​
+Polycystic_family: "family"
+​
+Polycystic_self: "self"
+​
+Prostate_family: "family"
+​
+Prostate_self: "self"
+​
+Psychiatric_family: "family"
+​
+Psychiatric_self: "self"
+​
+Seizures_family: "family"
+​
+Seizures_self: "self"
+​
+Sinusitis_family: "family"
+​
+Sinusitis_self: "self"
+​
+Sleep_family: "family"
+​
+Sleep_self: "self"
+​
+Stroke_family: "family"
+​
+Stroke_self: "self"
+​
+Thyroid_family: "family"
+​
+Thyroid_self: "self"
+​
+Urinary_family: "family"
+​
+Urinary_self: "self"
+​
+age: ""
+​
+agree: ""
+​
+
+}

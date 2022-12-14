@@ -1,0 +1,8 @@
+// login data
+
+{
+  "status": "success",
+  "otp": "ODE1NjM=",
+  "mobile_number": "918939068212",
+  "data": { "number_exist": 0 }
+}
