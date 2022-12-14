@@ -85,6 +85,10 @@ const PatientNotes = () => {
         notes: notes,
       },
     });
+    getArrOfObj("healthrecord", {
+      api_key: "get_healthrecord_patient_notes",
+      data: { p_id: pat_id },
+    });
   };
   if (!details) {
     return <Loading center />;

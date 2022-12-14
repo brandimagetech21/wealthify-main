@@ -109,12 +109,12 @@ const Navbar = () => {
             <ul>
               <ActiveLink route={"/nutrition"}>Nutrition DataBase</ActiveLink>
             </ul>
-            <ul onClick={() => setModal(!modal)}>
+            {/* <ul onClick={() => setModal(!modal)}>
               <Link href={""}>
                 <a href=""> Login</a>
               </Link>
-            </ul>
-            {/* {loggedIn === "true" ? (
+            </ul> */}
+            {loggedIn === "true" ? (
               <ul></ul>
             ) : (
               <ul onClick={() => setModal(!modal)}>
@@ -122,20 +122,20 @@ const Navbar = () => {
                   <a href=""> Login</a>
                 </Link>
               </ul>
-            )} */}
+            )}
           </li>
         </div>
 
-        <Link href={"/adminHome"}>
+        {/* <Link href={"/adminHome"}>
           <div className="third-item">
             <button className="btn-primary">Admin Login</button>
           </div>
-        </Link>
-        <Link href={"/doctorHome"}>
+        </Link> */}
+        {/* <Link href={"/doctorHome"}>
           <div className="third-item">
-            <button className="btn-primary">Doctor Login</button>
+            <button className="btn-primary">Doctor Home</button>
           </div>
-        </Link>
+        </Link> */}
       </div>
       {modal && <Login setModal={setModal} url={"portal"} />}
       {openDoctor && <DoctorLogin setModal={setOpenDoctor} url={"doctor"} />}

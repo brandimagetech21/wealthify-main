@@ -66,13 +66,25 @@ const Wrappers = styled.div`
     font-weight: 300;
   }
 
+  
+
+  .icon {
+    padding: 10;
+    padding-left: 435px;
+    padding-top: 1px;
+    color: #787878;
+    min-width: 50px;
+    text-align: center;
+    justify-items: center;
+  }
+
   .searchbar input {
     border: 2px solid grey;
 
     border-radius: 20px;
     margin-left: 65px;
     width: 450px;
-    height: 38px;
+    height: 42px;
     /* background-color: red; */
     font-size: 24px;
   }
@@ -81,6 +93,10 @@ const Wrappers = styled.div`
     font-size: 20px;
     padding-left: 20px;
     color: #e0e0e0;
+  }
+  .search-icon {
+    margin-left: 29rem;
+    margin-bottom: -3rem;
   }
   /* 
 div i {
@@ -126,10 +142,10 @@ div i {
     height: 50px;
     background-color: yellow;
     border-radius: 50px;
-    margin-left: 12px;
+    margin-left: 10%;
     font-family: Arial, Helvetica, sans-serif;
     border: 2px white;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     justify-content: space-between;
     color: green;
     font-weight: 200;
@@ -137,9 +153,9 @@ div i {
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    outline: none;
   }
-
-  /* .button {
+  .button {
     width: 10% !important;
     height: 20%;
     background-color: yellow;
@@ -149,24 +165,7 @@ div i {
     text-align: center;
     cursor: pointer;
     border: 2px white !important;
-  } */
-
-  .button {
-    width: 20vh !important;
-    height: 7vh;
-    position: relative;
-    background-color: yellow;
-    box-shadow: 1px 1px solid black;
-    color: green;
-    font-weight: 300;
-    text-align: center;
-    cursor: pointer;
-    padding-top: 2vh;
-    margin-left: 4vh;
-    border: 2px white !important;
-    border-radius: 20px;
   }
-
   .fruitgrid {
     display: grid;
     grid-template-columns:

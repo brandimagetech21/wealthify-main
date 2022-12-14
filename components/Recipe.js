@@ -76,7 +76,7 @@ const Recipe = () => {
       </div>
 
       <div className="searchbar" onSubmit={(e) => handleSubmit(e)}>
-        <form method="post">
+        {/* <form method="post">
           <span className="searchrec"></span>
           <span className="">
             {" "}
@@ -94,6 +94,17 @@ const Recipe = () => {
           <button className="button" type="submit" value="SEARCH">
             Search
           </button>
+        </form> */}
+        <form method="get">
+          <span className="searchrec"></span>
+          <span className="">
+            {" "}
+            <div className="search-icon">
+              <Image src={searchIcon} />
+            </div>
+          </span>
+          <input type="search-bar" typeof="text" placeholder="Search" />
+          <input className="button" type="submit" value="SEARCH "></input>
         </form>
       </div>
 

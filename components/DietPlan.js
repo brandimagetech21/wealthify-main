@@ -70,6 +70,10 @@ const DietPlan = () => {
       });
       setResponseArray({ data });
       resetFile();
+      getTestReport("healthrecord", {
+        api_key: "get_diet_plan",
+        p_id: pat_id,
+      });
     } catch (error) {
       alert(error);
     }
@@ -98,14 +102,13 @@ const DietPlan = () => {
           </form>
         </div>
         <div className="file-display">
-          <table>
-            {imageData.map((item) => {
+          {imageData.map((item) => {
               const urlData = window.atob(item);
               return (
-                <tr className="file-data">
+                <div className="file-data">
                   <iframe
                     src={`http://doctor.brandimagetech.com/${urlData}`}
-                    frameborder="0"
+                    frameborder="0" width="100%"  height="100%"
                   ></iframe>
                   <a
                     className="open-preview"
@@ -114,31 +117,25 @@ const DietPlan = () => {
                   >
                     Click
                   </a>
-                </tr>
+                </div>
               );
             })}
-          </table>
         </div>
       </div>
     </Wrappers>
   );
 };
 const Wrappers = styled.div`
-  width: 700px;
-  height: 500px;
+  
+.file-form {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  -webkit-box-pack: center;
   justify-content: center;
-  position: relative;
-
-  .file-form {
-    margin-left: 4rem;
-    margin-top: 2rem;
-    height: 300px;
-    position: absolute;
-    top: 1rem;
-    left: 20%;
-  }
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 2rem;
+}
   form {
     display: flex;
     flex-direction: column;
@@ -153,12 +150,8 @@ const Wrappers = styled.div`
     color: white;
   }
   .file-display {
-    width: 600px;
-    height: 200px;
-    overflow: scroll;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 2rem;
+
   }
   .open-preview {
     margin-left: 7rem;
@@ -175,6 +168,12 @@ const Wrappers = styled.div`
   }
   @media (max-width: 480px) {
     width: 300px;
+  }
+  .file-data {
+    width: 360px;
+    height: 200px;
+    display: inline-block;
+    margin:10px;
   }
 `;
 export default DietPlan;

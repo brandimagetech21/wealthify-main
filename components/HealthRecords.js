@@ -13,7 +13,7 @@ import FollowUp from "./FollowUp.js";
 import History from "./History.js";
 import { useAppcontext } from "../context/appContext.js";
 const HealthRecords = () => {
-  const [tab, setTab] = useState("doctorConsultation");
+  const [tab, setTab] = useState("healthCondition");
   const { dob, height, currentWeight, bloodGroup, sex, firstName, lastName } =
     useAppcontext();
   return (

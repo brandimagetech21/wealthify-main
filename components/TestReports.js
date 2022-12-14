@@ -24,7 +24,7 @@ const Fileupload2 = () => {
   console.log(pat_id);
 
   useEffect(() => {
-    // if (effectRan.current === false) {
+    if (effectRan.current === false) {
     getTestReport("healthrecord", {
       api_key: "get_healthrecord_test_report",
       p_id: pat_id,
@@ -32,10 +32,9 @@ const Fileupload2 = () => {
     console.log("ran 1");
     return () => {
       effectRan.current = true;
-      // };
+     };
     };
   }, [change]);
-  console.log(imageData);
 
   const handleInputChange = (e) => {
     setSelectedFile(e.target.files);
@@ -70,6 +69,10 @@ const Fileupload2 = () => {
       });
       setResponseArray({ data });
       resetFile();
+      getTestReport("healthrecord", {
+        api_key: "get_healthrecord_test_report",
+        p_id: pat_id,
+      });
     } catch (error) {
       alert(error);
     }
@@ -98,7 +101,29 @@ const Fileupload2 = () => {
           </form>
         </div>
         <div className="file-display">
-          <table>
+
+          <div>
+          {imageData.map((item) => {
+              const urlData = window.atob(item);
+              return (
+                <div className="file-data">
+                  <iframe
+                    src={`http://doctor.brandimagetech.com/${urlData}`}
+                    frameborder="0" width="100%"  height="100%"
+                  ></iframe>
+                  <a
+                    className="open-preview"
+                    href={`http://doctor.brandimagetech.com/${urlData}`}
+                    target="_blank"
+                  >
+                    Click
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* <table>
             {imageData.map((item) => {
               const urlData = window.atob(item);
               return (
@@ -117,27 +142,22 @@ const Fileupload2 = () => {
                 </tr>
               );
             })}
-          </table>
+          </table> */}
         </div>
       </div>
     </Wrappers>
   );
 };
 const Wrappers = styled.div`
-  width: 700px;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
+ 
   .file-form {
-    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
     margin-top: 2rem;
-    height: 300px;
-    position: absolute;
-    top: 1rem;
-    left: 20%;
   }
   form {
     display: flex;
@@ -153,12 +173,7 @@ const Wrappers = styled.div`
     color: white;
   }
   .file-display {
-    width: 600px;
-    height: 200px;
-    overflow: scroll;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 2rem;
   }
   .open-preview {
     margin-left: 7rem;
@@ -175,6 +190,12 @@ const Wrappers = styled.div`
   }
   @media (max-width: 480px) {
     width: 300px;
+  }
+  .file-data {
+    width: 360px;
+    height: 200px;
+    display: inline-block;
+    margin:10px;
   }
 `;
 export default Fileupload2;

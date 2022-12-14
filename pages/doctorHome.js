@@ -5,12 +5,14 @@ import Loading from "../components/Loading";
 import { useAppcontext } from "../context/appContext";
 let doctorId;
 if (typeof window !== "undefined") {
-  doctorId = localStorage.getItem("doctorId");
+  //doctorId = localStorage.getItem("doctorId");
 }
 
 const doctorHome = () => {
   const { getArrOfObj, details } = useAppcontext();
   useEffect(() => {
+    doctorId = localStorage.getItem("doctorId");
+
     getArrOfObj("doctor", {
       api_key: "get_doctor_info",
       data: { doc_id: doctorId },

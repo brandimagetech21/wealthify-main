@@ -55,7 +55,7 @@ const NutritionDb = () => {
       </div>
 
       <div className="searchbar" onSubmit={(e) => handleSubmit(e)}>
-        <form method="post">
+        {/* <form method="post">
           <span className="searchrec"></span>
           <div className="search-icon">
             <Image src={searchIcon} />
@@ -71,6 +71,15 @@ const NutritionDb = () => {
           <button className="button" type="submit" value="SEARCH ">
             Search
           </button>
+        </form> */}
+        <form method="get">
+          <span className="searchrec"></span>
+          <div className="search-icon">
+            <Image src={searchIcon} />
+          </div>
+          <i className="fa fa-search fa-xl icon" aria-hidden="true"></i>
+          <input type="search-bar" typeof="text" placeholder="Search" />
+          <input className="button" type="submit" value="SEARCH "></input>
         </form>
       </div>
 

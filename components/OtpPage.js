@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Wrappers from "../assets/wrappers/OtpPage";
 import loginBtn from "../assets/image/loginBtn.png";
 import { AiOutlineArrowLeft, AiOutlineClose } from "react-icons/ai";
@@ -9,7 +9,7 @@ import { useAppcontext } from "../context/appContext";
 
 let userType;
 if (typeof window !== "undefined") {
-  userType = localStorage.getItem("user_type");
+  //userType = localStorage.getItem("user_type");
 }
 const OtpPage = ({ setModal, setNextPage, mobileNumber, loginInformation }) => {
   const router = useRouter();
@@ -19,20 +19,24 @@ const OtpPage = ({ setModal, setNextPage, mobileNumber, loginInformation }) => {
   const handleChange = (e) => {
     setOtp(e.target.value);
   };
+  useEffect(() => {
+    userType = localStorage.getItem("user_type");
+  });
   const handleSubmit = (e) => {
     e.preventDefault();
     var decodedString = window.btoa(otp);
-
     // if (otpValue === decodedString) {
     if (otpValue) {
       //localStorage.setItem("loggedIn", true);
       if (numberExist === 0) {
         router.push(`/assessment?${phoneNumber}`);
       } else if (userType === "doctor") {
+        localStorage.setItem("loggedIn", true);
+        //localStorage.setItem("doctorId", doctorId);
         router.push("/doctorHome");
       } else if (numberExist === 1) {
         localStorage.setItem("loggedIn", true);
-        localStorage.setItem("doctorId", doctorId);
+        //localStorage.setItem("doctorId", doctorId);
         router.reload(window.location.pathnames);
       }
       setModal(false);

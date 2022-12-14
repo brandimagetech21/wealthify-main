@@ -21,7 +21,6 @@ const Wrappers = styled.div`
   .doctor-heading th {
     padding: 1rem 0;
     background-color: #a1c334;
-    overflow: scroll;
   }
   .doctor-heading td {
     padding: 0.75rem 0;

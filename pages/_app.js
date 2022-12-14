@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
     if (loggedIn === "true") {
-      router.push("/");
+      //router.push("/");
     } else {
       router.push("/homeLoggedOut");
     }
