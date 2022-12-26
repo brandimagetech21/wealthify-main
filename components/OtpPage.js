@@ -10,7 +10,7 @@ import { useAppcontext } from "../context/appContext";
 let userType;
 if (typeof window !== "undefined") {
   //userType = localStorage.getItem("user_type");
-}
+} 
 const OtpPage = ({ setModal, setNextPage, mobileNumber, loginInformation }) => {
   const router = useRouter();
   const { otpValue, numberExist, patientId, doctorId, phoneNumber } =
