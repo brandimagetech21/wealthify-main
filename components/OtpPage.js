@@ -26,7 +26,7 @@ const OtpPage = ({ setModal, setNextPage, mobileNumber, loginInformation }) => {
     e.preventDefault();
     var decodedString = window.btoa(otp);
     // if (otpValue === decodedString) {
-    if (otpValue) {
+    if (otpValue === decodedString) {
       //localStorage.setItem("loggedIn", true);
       if (numberExist === 0) {
         router.push(`/assessment?${phoneNumber}`);
